@@ -39,4 +39,10 @@
 			   (1 font-lock-firm-comment-semi-face prepend)
 			   (2 font-lock-firm-comment-text-face prepend))))
 
+
+;;; Geiser
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+(require 'geiser-install)
+
 ;;; lisp.el ends here.
