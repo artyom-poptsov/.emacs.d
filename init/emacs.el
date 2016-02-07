@@ -73,4 +73,17 @@
 (require 'page-break-lines)
 (setq page-break-lines-char (string-to-char "┄"))
 
+
+;;; GNU Global
+
+(add-hook 'c-mode-hook
+          '(lambda () (gtags-mode t)))
+(add-hook 'java-mode-hook
+          (lambda () (gtags-mode t)))
+
+
+;;; Company
+
+(add-hook 'after-init-hook 'global-company-mode)
+
 ;;;; emacs.el ends here.
