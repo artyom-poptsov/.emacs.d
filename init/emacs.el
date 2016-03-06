@@ -6,6 +6,7 @@
 (setq column-number-mode t)
 (setq show-paren-mode    t)
 (setq fringe-mode        nil)
+(setq-default indicate-empty-lines t)
 
 ;; The menu bar is OK.
 (menu-bar-mode   1)
