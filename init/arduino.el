@@ -13,7 +13,7 @@
       (setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode)
 				  auto-mode-alist))
       (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t))
-  (lwarn :warning "Arduino IDE not found in %s."
+  (lwarn :warning "Arduino IDE not found in '%s'."
          %arduino-dir))
 
 ;;; arduino.el ends here.
