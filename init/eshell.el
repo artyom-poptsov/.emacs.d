@@ -2,15 +2,17 @@
 
 (require 'eshell)
 
+
 (setq eshell-directory-name (expand-file-name "eshell" *emacs-local-dir*))
 
-(setenv "PAGER" "cat")
+(setenv "PAGER"     "cat")
 (setenv "GIT_PAGER" "cat")
-(setenv "TERM" "xterm-256color")
+(setenv "TERM"      "xterm-256color")
 
 (setq eshell-history-size 2048)
 (setq eshell-prompt-regexp "^.*[#$] ")
 
+
 (defun pwd-repl-home (pwd)
   (interactive)
   (let* ((home     (expand-file-name (getenv "HOME")))
@@ -20,6 +22,7 @@
         (concat "~" (substring pwd home-len))
       (car (reverse (split-string pwd "[/]"))))))
 
+
 ;; Configure the prompt
 (setq eshell-prompt-function
   (lambda ()
