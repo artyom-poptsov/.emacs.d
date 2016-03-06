@@ -40,10 +40,14 @@ exist."
   (let* ((file     (expand-file-name name dir))
          (elc-file (concat file ".elc"))
          (el-file  (concat file ".el")))
-    (crane:compile-if-older file)
-    (if (file-exists-p (expand-file-name elc-file dir))
-        (load-file (expand-file-name elc-file dir))
-      (load-file (expand-file-name el-file dir)))))
+    (if (file-exists-p el-file)
+        (progn
+          (crane:compile-if-older file)
+          (if (file-exists-p (expand-file-name elc-file dir))
+              (load-file (expand-file-name elc-file dir))
+            (load-file (expand-file-name el-file dir))))
+      (message "Could not load %s from %s (no such file.)"
+               el-file dir))))
 
 (defun crane:load-init (name)
   "Load initialization module NAME."
