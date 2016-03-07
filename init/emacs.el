@@ -24,8 +24,8 @@
 
 (add-hook 'prog-mode-hook
           (lambda ()
-            (when (fboundp 'idle-highlight-mode)
-              (idle-highlight-mode t))
+            (when (fboundp 'idle-highlight)
+              (idle-highlight t))
             (font-lock-add-keywords nil
                                     '(("\\<\\(FIXME\\|TODO\\|BUG\\|XXX\\):"
                                        1 font-lock-warning-face t)))
