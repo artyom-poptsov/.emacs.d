@@ -18,7 +18,9 @@
                                     '(("\\<\\(FIXME\\|TODO\\|BUG\\|XXX\\):"
                                        1 font-lock-warning-face t)))))
 
-(pretty-lambda-for-modes)
+(when (fboundp 'pretty-lambda-for-modes)
+  (pretty-lambda-for-modes))
+
 (setq geiser-mode-auto-p t)
 
 (add-hook 'scheme-mode-hook
