@@ -10,8 +10,9 @@
             (font-lock-add-keywords nil
                                     '(("\\<\\(XXX\\|FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
 
-(crane:load-extension "jde-maven")
-(require 'jde-maven)
+(when (crane:extension-exist? "jde-maven")
+  (crane:load-extension "jde-maven")
+  (require 'jde-maven))
 
 (c-add-style "java-sun"
              '("java"

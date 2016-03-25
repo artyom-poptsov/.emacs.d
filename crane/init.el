@@ -61,4 +61,8 @@ exist."
   "Load a local file NAME."
   (crane:load-module name *emacs-local-dir*))
 
+(defun crane:extension-exist? (name)
+  "Check if an extension NAME exists."
+  (file-exists-p (concat (expand-file-name name *emacs-lisp-dir*) ".el")))
+
 ;;; init.el ends here
