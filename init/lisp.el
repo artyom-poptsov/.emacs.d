@@ -18,8 +18,20 @@
                                     '(("\\<\\(FIXME\\|TODO\\|BUG\\|XXX\\):"
                                        1 font-lock-warning-face t)))))
 
-(when (fboundp 'pretty-lambda-for-modes)
-  (pretty-lambda-for-modes))
+
+;;; Pretty lambda.
+
+(defun my-pretty-lambda ()
+  "make some word or string show as pretty Unicode symbols"
+  (setq prettify-symbols-alist
+        '(
+          ("lambda" . 955) ; λ
+          )))
+
+(add-hook 'scheme-mode-hook 'my-pretty-lambda)
+(global-prettify-symbols-mode 1)
+
+;;;
 
 (setq geiser-mode-auto-p t)
 
