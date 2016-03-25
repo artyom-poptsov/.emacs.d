@@ -100,7 +100,9 @@
 ;(require 'ecb)
 (require 'xml)
 (require 'nnir)
-(require 'gnus-notify)
+
+(unless (require 'gnus-notify "gnus-notify" t)
+  (message "Extension 'gnus-notify' is not installed"))
 
 
 ;;; Guix
