@@ -34,20 +34,6 @@
 (setq bookmark-file (expand-file-name "bookmarks" *emacs-local-dir*))
 
 
-;;; ELPA
-
-(require 'url-http)
-(require 'url)
-(require 'package)
-
-(package-initialize)
-
-(add-to-list 'package-archives
-             '("elpa" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives
-             '("marmalade" . "https://marmalade-repo.org/packages/") t)
-
-
 ;;; Custom font faces.
 
 (defconst font-lock-firm-comment-semi-face 'font-lock-firm-comment-semi-face)

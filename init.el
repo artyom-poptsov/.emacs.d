@@ -3,6 +3,43 @@
 (load-file "~/.emacs.d/crane/init.elc")
 
 
+;;; ELPA
+
+(require 'url-http)
+(require 'url)
+(require 'package)
+
+(add-to-list 'package-archives
+             '("elpa" . "http://tromey.com/elpa/") t)
+(add-to-list 'package-archives
+             '("marmalade" . "https://marmalade-repo.org/packages/") t)
+
+(package-initialize)
+
+;; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
+
+
+;; List of packages.
+(setq package-list '(company
+                     geiser
+                     gitignore-mode
+                     js2-mode
+                     js-comint
+                     paredit
+                     page-break-lines
+                     pretty-lambdada
+                     smartparens
+                     wtf
+                     zenburn-theme))
+
+;; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+
 ;;; Load files
 
 ;; Load Emacs extensions
