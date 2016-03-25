@@ -120,6 +120,8 @@
 
 
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/tex-utils")
-(require 'xdvi-search)
+
+(unless (require 'xdvi-search "xdvi-search" t)
+  (message "Extension 'xdvi-search' is not installed"))
 
 ;;;; init.el ends here.
