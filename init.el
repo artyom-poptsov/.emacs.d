@@ -90,7 +90,9 @@
 
 ;;; Required packages
 
-(require 'column-marker)
+(unless (require 'column-marker "column-marker" t)
+  (message "Extension 'column-marker' is not installed"))
+
 (require 'linum)
 (require 'tramp)
 (require 'cedet)
