@@ -25,6 +25,7 @@
 (setq package-list '(company
                      geiser
                      gitignore-mode
+                     dired-isearch
                      js2-mode
                      js-comint
                      paredit
