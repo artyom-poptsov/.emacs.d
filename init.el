@@ -31,6 +31,18 @@
                      paredit
                      page-break-lines
                      pretty-lambdada
+                     dockerfile-mode
+                     idle-highlight-mode
+                     inf-ruby
+                     markdown-mode
+                     markdown-toc
+                     nodejs-repl
+                     ruby-block
+                     ruby-compilation
+                     ruby-tools
+                     rvm
+                     xlicense
+                     yaml-mode
                      smartparens
                      wtf
                      zenburn-theme))
