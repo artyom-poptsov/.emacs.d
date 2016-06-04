@@ -45,7 +45,8 @@
                      yaml-mode
                      smartparens
                      wtf
-                     zenburn-theme))
+                     zenburn-theme
+                     nurumacs))
 
 ;; install the missing packages
 (dolist (package package-list)
@@ -90,7 +91,8 @@
         "shell-script"
         "tex"
         "arduino"
-        "sql"))
+        "sql"
+        "nurumacs-init"))
 
 ;; Load user configuration
 (crane:load-local "init")
