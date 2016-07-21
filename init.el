@@ -35,7 +35,6 @@
                      idle-highlight-mode
                      inf-ruby
                      markdown-mode
-                     markdown-toc
                      nodejs-repl
                      ruby-block
                      ruby-compilation
