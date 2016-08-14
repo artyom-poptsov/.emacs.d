@@ -90,8 +90,7 @@
         "shell-script"
         "tex"
         "arduino"
-        "sql"
-        "nurumacs-init"))
+        "sql"))
 
 ;; Load user configuration
 (crane:load-local "init")
